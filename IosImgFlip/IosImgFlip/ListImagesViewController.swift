@@ -39,7 +39,9 @@ class ListImageViewController:UIViewController,UITableViewDelegate,UITableViewDa
                 let json = try JSON(data:data!)
                 if let memes = json["data"]["memes"].array {
                     for meme in memes {
-                        self.memes.append(JSON(meme))
+                        if(meme["box_count"].intValue < 3){
+                            self.memes.append(JSON(meme))
+                        }
                     }
                     DispatchQueue.main.async{
                         self.tableView.reloadData()
