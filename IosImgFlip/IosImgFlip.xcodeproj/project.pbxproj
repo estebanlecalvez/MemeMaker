@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4290D671240905490039EEE0 /* GridViewMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290D670240905490039EEE0 /* GridViewMemeViewController.swift */; };
 		42D0A8832407F38E009CAC90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8822407F38E009CAC90 /* AppDelegate.swift */; };
 		42D0A8852407F38E009CAC90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8842407F38E009CAC90 /* SceneDelegate.swift */; };
 		42D0A8872407F38E009CAC90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8862407F38E009CAC90 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		35EB160D5F31C8A163071FF0 /* Pods-IosImgFlip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosImgFlip.debug.xcconfig"; path = "Target Support Files/Pods-IosImgFlip/Pods-IosImgFlip.debug.xcconfig"; sourceTree = "<group>"; };
+		4290D670240905490039EEE0 /* GridViewMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewMemeViewController.swift; sourceTree = "<group>"; };
 		42D0A87F2407F38E009CAC90 /* IosImgFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosImgFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D0A8822407F38E009CAC90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42D0A8842407F38E009CAC90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				42D0A8902407F392009CAC90 /* Info.plist */,
 				42D0A8962407F404009CAC90 /* ListImagesViewController.swift */,
 				42D0A8982407F554009CAC90 /* GenerateMemeViewController.swift */,
+				4290D670240905490039EEE0 /* GridViewMemeViewController.swift */,
 			);
 			path = IosImgFlip;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				42D0A8872407F38E009CAC90 /* ViewController.swift in Sources */,
 				42D0A8992407F554009CAC90 /* GenerateMemeViewController.swift in Sources */,
+				4290D671240905490039EEE0 /* GridViewMemeViewController.swift in Sources */,
 				42D0A8832407F38E009CAC90 /* AppDelegate.swift in Sources */,
 				42D0A8972407F404009CAC90 /* ListImagesViewController.swift in Sources */,
 				42D0A8852407F38E009CAC90 /* SceneDelegate.swift in Sources */,
