@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4290D671240905490039EEE0 /* GridViewMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290D670240905490039EEE0 /* GridViewMemeViewController.swift */; };
+		4290D67824092ABC0039EEE0 /* GridCollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290D67724092ABC0039EEE0 /* GridCollectionItemCell.swift */; };
+		4290D67A24094F1F0039EEE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4290D67924094F1E0039EEE0 /* GoogleService-Info.plist */; };
+		4290D67C240954D60039EEE0 /* ConnexionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290D67B240954D60039EEE0 /* ConnexionViewController.swift */; };
 		42D0A8832407F38E009CAC90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8822407F38E009CAC90 /* AppDelegate.swift */; };
 		42D0A8852407F38E009CAC90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8842407F38E009CAC90 /* SceneDelegate.swift */; };
 		42D0A8872407F38E009CAC90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0A8862407F38E009CAC90 /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		35EB160D5F31C8A163071FF0 /* Pods-IosImgFlip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosImgFlip.debug.xcconfig"; path = "Target Support Files/Pods-IosImgFlip/Pods-IosImgFlip.debug.xcconfig"; sourceTree = "<group>"; };
 		4290D670240905490039EEE0 /* GridViewMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewMemeViewController.swift; sourceTree = "<group>"; };
+		4290D67724092ABC0039EEE0 /* GridCollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionItemCell.swift; sourceTree = "<group>"; };
+		4290D67924094F1E0039EEE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4290D67B240954D60039EEE0 /* ConnexionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionViewController.swift; sourceTree = "<group>"; };
 		42D0A87F2407F38E009CAC90 /* IosImgFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosImgFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D0A8822407F38E009CAC90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42D0A8842407F38E009CAC90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		42D0A8812407F38E009CAC90 /* IosImgFlip */ = {
 			isa = PBXGroup;
 			children = (
+				4290D67924094F1E0039EEE0 /* GoogleService-Info.plist */,
 				42D0A8822407F38E009CAC90 /* AppDelegate.swift */,
 				42D0A8842407F38E009CAC90 /* SceneDelegate.swift */,
 				42D0A8862407F38E009CAC90 /* ViewController.swift */,
@@ -88,6 +95,8 @@
 				42D0A8962407F404009CAC90 /* ListImagesViewController.swift */,
 				42D0A8982407F554009CAC90 /* GenerateMemeViewController.swift */,
 				4290D670240905490039EEE0 /* GridViewMemeViewController.swift */,
+				4290D67724092ABC0039EEE0 /* GridCollectionItemCell.swift */,
+				4290D67B240954D60039EEE0 /* ConnexionViewController.swift */,
 			);
 			path = IosImgFlip;
 			sourceTree = "<group>";
@@ -112,6 +121,7 @@
 				42D0A87C2407F38E009CAC90 /* Frameworks */,
 				42D0A87D2407F38E009CAC90 /* Resources */,
 				ECD9C65717E08AE510A7EABC /* [CP] Embed Pods Frameworks */,
+				C40FC03E50278453FA92A46F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D0A88F2407F392009CAC90 /* LaunchScreen.storyboard in Resources */,
+				4290D67A24094F1F0039EEE0 /* GoogleService-Info.plist in Resources */,
 				42D0A88C2407F392009CAC90 /* Assets.xcassets in Resources */,
 				42D0A88A2407F38E009CAC90 /* Main.storyboard in Resources */,
 			);
@@ -191,6 +202,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C40FC03E50278453FA92A46F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IosImgFlip/Pods-IosImgFlip-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IosImgFlip/Pods-IosImgFlip-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IosImgFlip/Pods-IosImgFlip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ECD9C65717E08AE510A7EABC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,12 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4290D67C240954D60039EEE0 /* ConnexionViewController.swift in Sources */,
 				42D0A8872407F38E009CAC90 /* ViewController.swift in Sources */,
 				42D0A8992407F554009CAC90 /* GenerateMemeViewController.swift in Sources */,
 				4290D671240905490039EEE0 /* GridViewMemeViewController.swift in Sources */,
 				42D0A8832407F38E009CAC90 /* AppDelegate.swift in Sources */,
 				42D0A8972407F404009CAC90 /* ListImagesViewController.swift in Sources */,
 				42D0A8852407F38E009CAC90 /* SceneDelegate.swift in Sources */,
+				4290D67824092ABC0039EEE0 /* GridCollectionItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

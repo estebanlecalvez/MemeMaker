@@ -49,7 +49,7 @@ class ListImageViewController:UIViewController,UITableViewDelegate,UITableViewDa
                             let name = meme["name"].stringValue
                             if searchTerms == ""{
                                 self.memes.append(JSON(meme))
-                            }else if name.contains(searchTerms) {
+                            }else if name.lowercased().contains(searchTerms.lowercased()) {
                                  self.memes.append(JSON(meme))
                             }
                         }

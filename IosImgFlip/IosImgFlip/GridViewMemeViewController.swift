@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyJSON
 import Kingfisher
+import SDWebImage
+
 
 
 class GridViewMemeViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -49,7 +51,12 @@ class GridViewMemeViewController:UICollectionViewController, UICollectionViewDel
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 2.0) + (flowayout?.sectionInset.right ?? 2.0)
 
-        let size:CGFloat = (collectionView.frame.size.width) / 2.0
+        print(collectionView.frame.size.width)
+        
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        
+        print(size)
+        
         return CGSize(width:size,height: size)
     }
     
@@ -61,13 +68,12 @@ class GridViewMemeViewController:UICollectionViewController, UICollectionViewDel
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = gridView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         let titleLabel:UILabel = cell.viewWithTag(2) as! UILabel
-               let image:UIImageView = cell.viewWithTag(3) as! UIImageView
-               
+              let image:UIImageView = cell.viewWithTag(3) as! UIImageView
+
                titleLabel.text = self.memes[indexPath.row]["name"].stringValue
-               
+
                let url = URL(string:self.memes[indexPath.row]["url"].stringValue)
-               image.kf.setImage(with:url)
+        image.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
         return cell
     }
-    
 }

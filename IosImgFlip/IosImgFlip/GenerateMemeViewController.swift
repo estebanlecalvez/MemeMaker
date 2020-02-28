@@ -14,7 +14,8 @@ import SwiftyJSON
 
 class GenerateMemeViewController: UIViewController{
     var myData: JSON?
-    
+    var imageToShare: String?
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var firstText: UITextField!
@@ -27,8 +28,15 @@ class GenerateMemeViewController: UIViewController{
         name.text = myData!["name"].stringValue
     }
     @IBAction func onButtonPressed(_ sender: Any) {
-
         changeImage()
+    }
+    
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        let activityItem: [AnyObject] = [self.image.image!]
+        
+        let avc = UIActivityViewController(activityItems: activityItem, applicationActivities: nil)
+        
+        self.present(avc, animated: true, completion: nil)
     }
     
     func changeImage(){
@@ -48,7 +56,7 @@ class GenerateMemeViewController: UIViewController{
         let jsonString = params.reduce("") { "\($0)\($1.0)=\($1.1)&" }
         let jsonData = jsonString.data(using: .utf8, allowLossyConversion: false)!
         request.httpBody  = jsonData
-
+        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             do{
                 let json = try JSON(data:data!)
@@ -56,10 +64,11 @@ class GenerateMemeViewController: UIViewController{
                 
                 if(json["success"].boolValue == true){
                     DispatchQueue.main.async{
-                                       self.image.kf.setImage(with: URL(string:url.stringValue))
-                                   }
+                        self.imageToShare = url.stringValue
+                        self.image.kf.setImage(with: URL(string:url.stringValue))
+                    }
                 }
-//               fixme:toast
+                //               fixme:toast
             }catch(let catchedError){
                 print("error in parsing \(catchedError)")
             }
